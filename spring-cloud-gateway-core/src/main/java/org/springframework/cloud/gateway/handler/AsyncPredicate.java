@@ -26,6 +26,7 @@ import reactor.core.publisher.Mono;
 
 /**
  * @author Ben Hale
+ * Flux另类玩法：数据压缩 zip
  */
 public interface AsyncPredicate<T> extends Function<T, Publisher<Boolean>> {
 

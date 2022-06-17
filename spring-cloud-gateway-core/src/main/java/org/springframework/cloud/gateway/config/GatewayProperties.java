@@ -34,6 +34,7 @@ import org.springframework.validation.annotation.Validated;
 
 /**
  * @author Spencer Gibb
+ * GatewayAutoConfiguration配置类
  */
 @ConfigurationProperties("spring.cloud.gateway")
 @Validated
@@ -42,6 +43,7 @@ public class GatewayProperties {
 	private final Log logger = LogFactory.getLog(getClass());
 	/**
 	 * List of Routes
+	 * 定位 Route
 	 */
 	@NotNull
 	@Valid
@@ -49,6 +51,9 @@ public class GatewayProperties {
 
 	/**
 	 * List of filter definitions that are applied to every route.
+	 * 定位 Filters
+	 * 默认 Filter会定位到每一个 Route上去
+	 * 后续会与 route中定义的 filter合并.
 	 */
 	private List<FilterDefinition> defaultFilters = new ArrayList<>();
 

@@ -42,13 +42,13 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.t
 public class Route implements Ordered {
 
 	private final String id;
-
+	// 目的地
 	private final URI uri;
-
+	// Route优先级排序
 	private final int order;
-
+	// 断言, 满足条件后才会路由到目的 uri
 	private final AsyncPredicate<ServerWebExchange> predicate;
-
+	// 过滤链，针对流量进行扩展
 	private final List<GatewayFilter> gatewayFilters;
 
 	public static Builder builder() {

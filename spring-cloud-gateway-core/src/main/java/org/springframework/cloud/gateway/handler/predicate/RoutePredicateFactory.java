@@ -30,6 +30,8 @@ import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.t
 
 /**
  * @author Spencer Gibb
+ * 生产 Predicate顶级函数式接口
+ * Configurable 说明 Predicate支持配置
  */
 @FunctionalInterface
 public interface RoutePredicateFactory<C> extends ShortcutConfigurable, Configurable<C> {
@@ -50,6 +52,10 @@ public interface RoutePredicateFactory<C> extends ShortcutConfigurable, Configur
 		return applyAsync(config);
 	}
 
+	/**
+	 * 这块会有各自对应的实现类
+	 * @return
+	 */
 	default Class<C> getConfigClass() {
 		throw new UnsupportedOperationException("getConfigClass() not implemented");
 	}

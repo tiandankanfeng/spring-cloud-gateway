@@ -36,6 +36,7 @@ import static org.springframework.util.StringUtils.tokenizeToStringArray;
 public class PredicateDefinition {
 	@NotNull
 	private String name;
+	// 构造 Predicate用到的参数
 	private Map<String, String> args = new LinkedHashMap<>();
 
 	public PredicateDefinition() {

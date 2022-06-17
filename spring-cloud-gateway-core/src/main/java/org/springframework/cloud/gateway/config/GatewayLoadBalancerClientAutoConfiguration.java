@@ -30,6 +30,7 @@ import org.springframework.web.reactive.DispatcherHandler;
 
 /**
  * @author Spencer Gibb
+ * 初始化 LoadBalancerClientFilter
  */
 @Configuration
 @ConditionalOnClass({LoadBalancerClient.class, RibbonAutoConfiguration.class, DispatcherHandler.class})
